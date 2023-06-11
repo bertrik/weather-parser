@@ -1,0 +1,30 @@
+[versions]
+slf4j = "2.0.7"
+jackson = "2.15.2"
+retrofit = "2.9.0"
+
+[libraries]
+slf4j = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+reload4j = { module = "org.slf4j:slf4j-reload4j", version.ref= "slf4j" }
+
+jackson-bind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref= "jackson" }
+jackson-yaml = { module = "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml", version.ref = "jackson" }
+jackson-csv = { module = "com.fasterxml.jackson.dataformat:jackson-dataformat-csv", version.ref = "jackson" }
+jackson-jsr310 = { module = "com.fasterxml.jackson.datatype:jackson-datatype-jsr310", version.ref = "jackson" }
+
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref= "retrofit" }
+retrofit-jackson = { module = "com.squareup.retrofit2:converter-jackson", version.ref= "retrofit" }
+retrofit-scalars = { module = "com.squareup.retrofit2:converter-scalars", version.ref= "retrofit" }
+
+junit = { module = "junit:junit", version = "4.13.2" }
+
+[bundles]
+jackson = ["jackson-bind", "jackson-yaml", "jackson-csv", "jackson-jsr310"]
+retrofit = ["retrofit", "retrofit-jackson", "retrofit-scalars"]
+
+[plugins]
+versions = { id = "com.github.ben-manes.versions", version = "0.46.0" }
+spotbugs = "com.github.spotbugs:5.0.14"
+dependencycheck = "org.owasp.dependencycheck:8.2.1"
+version-catalog-update = "nl.littlerobots.version-catalog-update:0.8.0"
+

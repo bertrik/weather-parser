@@ -1,0 +1,4 @@
+include 'weather-parser'
+
+rootProject.name = 'weather-parser'
+
