@@ -1,7 +1,7 @@
 [versions]
-slf4j = "2.0.9"
-jackson = "2.16.0"
-retrofit = "2.9.0"
+slf4j = "2.0.13"
+jackson = "2.17.1"
+retrofit = "2.11.0"
 
 [libraries]
 slf4j = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
@@ -23,8 +23,8 @@ jackson = ["jackson-bind", "jackson-yaml", "jackson-csv", "jackson-jsr310"]
 retrofit = ["retrofit", "retrofit-jackson", "retrofit-scalars"]
 
 [plugins]
-versions = { id = "com.github.ben-manes.versions", version = "0.50.0" }
-spotbugs = "com.github.spotbugs:5.0.14"
+versions = { id = "com.github.ben-manes.versions", version = "0.51.0" }
+spotbugs = "com.github.spotbugs:6.0.17"
 dependencycheck = "org.owasp.dependencycheck:8.4.2"
 version-catalog-update = "nl.littlerobots.version-catalog-update:0.8.0"
 
