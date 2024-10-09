@@ -2,8 +2,11 @@
 slf4j = "2.0.16"
 jackson = "2.18.0"
 retrofit = "2.11.0"
+errorprone = "2.33.0"
 
 [libraries]
+errorprone_annotations = { module = "com.google.errorprone:error_prone_annotations", version.ref = "errorprone" }
+errorprone_core = { module = "com.google.errorprone:error_prone_core", version.ref = "errorprone" }
 slf4j = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
 reload4j = { module = "org.slf4j:slf4j-reload4j", version.ref= "slf4j" }
 
@@ -24,7 +27,6 @@ retrofit = ["retrofit", "retrofit-jackson", "retrofit-scalars"]
 
 [plugins]
 versions = { id = "com.github.ben-manes.versions", version = "0.51.0" }
-spotbugs = "com.github.spotbugs:6.0.24"
 dependencycheck = "org.owasp.dependencycheck:8.4.2"
-version-catalog-update = "nl.littlerobots.version-catalog-update:0.8.0"
+errorprone = "net.ltgt.errorprone:4.0.1"
 
